@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="415.0" prefWidth="619.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gestiongames.Affichage">
+    <VBox alignment="CENTER" layoutX="26.0" layoutY="14.0" prefHeight="348.0" prefWidth="483.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+        <Label text="Liste Games" textFill="#e00808">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+
+        <Button fx:id="ajouter" onAction="#handleAjouterButtonAction" text="Ajouter" />
+
+        <HBox spacing="10.0">
+            <Button onAction="#importer" text="Importer" />
+            <Button onAction="#exporter" text="Exporter" />
+        </HBox>
+
+        <TableView fx:id="gameTable" prefHeight="257.0" prefWidth="556.0">
+            <columns>
+                <TableColumn fx:id="idColumn" text="ID" />
+                <TableColumn fx:id="nomColumn" text="Nom" />
+                <TableColumn fx:id="nomDeveloppeurColumn" text="Nom développeur" />
+                <TableColumn fx:id="anneeDeSortieColumn" text="Année de sortie" />
+                <TableColumn fx:id="plateformeColumn" text="Plateforme" />
+                <TableColumn fx:id="genreColumn" text="Genre" />
+                <TableColumn fx:id="supprimerColumn" text="Supprimer" />
+                <TableColumn fx:id="modifierColumn" text="Modifier" />
+            </columns>
+            <items>
+                <FXCollections fx:id="gameObservableList" fx:factory="observableArrayList" />
+            </items>
+        </TableView>
+    </VBox>
+</AnchorPane>

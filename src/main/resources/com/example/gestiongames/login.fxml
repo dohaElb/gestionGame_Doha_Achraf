@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="374.0" prefWidth="268.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gestiongames.Login">
+   <Label prefHeight="26.0" prefWidth="57.0" text="Login" textFill="#f40303">
+      <font>
+         <Font name="System Bold" size="17.0" />
+      </font>
+   </Label>
+
+    <Label text="Username" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+    <TextField fx:id="userId" prefHeight="25.0" prefWidth="143.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+    <Label text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+    <PasswordField fx:id="pwd" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+    <Button fx:id="okBtn" onAction="#okClicked" text="OK" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+    <Button fx:id="cancelBtn" onAction="#cancelClicked" text="Cancel" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+</VBox>
